@@ -1,0 +1,50 @@
+{{ define "header" }}
+
+{{ template "topheader" . }}
+
+
+<div class="container">
+    <nav class="navbar">
+        <div class="navbar-brand">
+        <img src="img/icon2.png" width="112" height="50">
+          
+         
+        </div>
+      
+     
+          
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                  <p class="control">
+                      <p class="control has-icons-left has-icons-right">
+                      <input class="input is-rounded" id="search" type="text" placeholder="Search">
+                      <span class="icon is-small is-left">
+                          <i class="fas fa-search"></i>
+                        </span> 
+                      </p>
+                  </p>
+                <p class="control">
+                    <a class="button is-warning " id="setting">
+                        <span class="icon">
+                          <i class="fa fa-cog"></i>
+                        </span>
+                        <span>Setting</span>
+                      </a>
+                </p>
+                <p class="control">
+                  <a class="button is-danger " href="https://gitlab.com/users/sign_out">
+                      <span class="icon">
+                        <i class="fa fa-power-off"></i>
+                      </span>
+                      <span>Log Out</span>
+                    </a>
+              </p>
+              </div>
+            </div>
+          </div>
+      
+      </nav>
+   
+    {{ end }}

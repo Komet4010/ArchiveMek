@@ -1,0 +1,51 @@
+{{ template "topheader" . }}
+  <section class="section">
+    <div class="container">
+      <div class="tabs is-right">
+        <ul>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-danger">
+                   <strong>Log Out</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="columns">
+      {{range .re}}
+        <div class="column is-one-third">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{.projectName}}</strong> <small>{{.email}}</small> <small>{{.uploadAt}}</small>
+                    <br>
+                    ID:{{.projectId}}<br>
+                    Name With Namespace:{{.nameWithNamespace}}<br>
+                    GoogleDrive:{{.googleDriveEmail}}<br>
+                    GoogleDrive Parth:{{.parthOfFolder}}<br>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+ 
+        
+        
+      {{end}}
+      </div>
+   </div>
+  </section>
+  </body>
+  <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/file-tree.min.js"></script>
+<script src="js/jquery.twbsPagination.min.js"></script>
+<script src="js/test.js"></script>
+</html>

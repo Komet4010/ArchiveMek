@@ -1,0 +1,49 @@
+{{ template "header" . }}
+<!--json folder all -->
+<input type="hidden" id="folder" value="{{.folder}}">
+<!-- folder id -->
+<input type="hidden" id="folderid" value="{{.folderid}}">
+<input type="hidden" id="num" value="{{.num}}">
+    <div class="columns columns is-multils-fline iex-mobile projectshow">
+{{range .api}}
+      <div class="column column is-one-quarter is-flex-mobile">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">    
+              {{.name}}
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              
+              {{.name_with_namespace}}
+              <br>
+              <time datetime="2016-1-1">{{.created_at}}</time>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href='#'  data-id="{{.id}}" data-target="modal" aria-haspopup="true" class=" archive card-footer-item button is-primary">Archive</a>
+          </footer>
+        </div>
+    </div>
+{{end}}
+    </div>
+
+    <div class="columns columns is-multiline is-flex-mobile"></div>
+      <nav class="pagination" role="navigation" aria-label="pagination">
+          <ul class="pagination" id="pagination"></ul>
+      </nav>
+    </div>
+  <!-- divofcontainer -->
+  </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/file-tree.min.js"></script>
+<script src="js/jquery.twbsPagination.min.js"></script>
+<script src="js/test.js"></script>
+
+
+</body>
+</html>
